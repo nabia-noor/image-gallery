@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Horizontal Scroll Image Gallery</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="gallery-wrap">
+            <img src="next.png" id="backBtn">
+          
+ <div class="gallery">
+    <div>
+      <span><img src="istockphoto-1846538503-1024x1024.jpg"></span>
+      <span><img src="istockphoto-1915382108-1024x1024.jpg"></span>
+      <span><img src="istockphoto-2073254261-1024x1024.jpg"></span>
+    </div>
+    <div>
+      <span><img src="istockphoto-2115141901-1024x1024.jpg"></span>
+      <span><img src="istockphoto-1808087627-1024x1024.jpg"></span>
+      <span><img src="istockphoto-2099403180-1024x1024 (1).jpg"></span>
+    </div>
+  
+   </div>
+            <img src="next.png" id="nextBtn">
+
+        </div>
+
+ <div class="gallery">
+  <div>
+<script>
+
+let scrollContainer = document.querySelector(".gallery");
+let backBtn = document.getElementById("backBtn");
+let nextBtn = document.getElementById("nextBtn");
+
+scrollContainer.addEventListener("wheel", (evt) =>{
+    evt.preventDefault();
+    scrollContainer.scrollLeft += evt.deltaY;
+});
+
+nextBtn.addEventListener("click", ()=>{
+    scrollContainer.scrollLeft += 900;
+})
+
+backBtn.addEventListener("click", ()=>{
+    scrollContainer.scrollLeft -= 900;
+})
+
+
+</script>
+
+
+
+
+
+    </body>
+</html>
